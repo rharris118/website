@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: shepleycomputers_production
-  username: shepleycomputers
-  password: <%= ENV['SHEPLEYCOMPUTERS_DATABASE_PASSWORD'] %>
+  username: <%= ENV['RAILS_MYSQL_USER'] || Rails.application.credentials.dig(:db, :username) %>
+  password: <%= ENV['RAILS_MYSQL_PASS'] || Rails.application.credentials.dig(:db, :password) %>
