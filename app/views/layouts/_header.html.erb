@@ -1,16 +1,21 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-inverse ">
     <div class="container">
         <%= link_to "Shepley Computers", root_path, id: "logo"%>
 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler01">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
         <nav>
-            <ul class="nav navbar-nav navbar-right">
-                <li><%= link_to "Home",       root_path %></li>
-                <li><%= link_to "Shop",       '#' %></li>
-                <li><%= link_to "Services",   '#' %></li>
-                <li><%= link_to "Pay",        '#' %></li>
-                <li><%= link_to "About",      about_path %></li>
-                <li><%= link_to "Contact Us", contact_path %></li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarToggler01">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><%= link_to "Home",       root_path %></li>
+                    <li><%= link_to "Shop",       '/shop/index.php' %></li>
+                    <li><%= link_to "Services",   services_path %></li>
+                    <li><%= link_to "About",      about_path %></li>
+                    <li><%= link_to "Contact Us", contact_path %></li>
+                </ul>
+            </div>
         </nav>
 
     </div>
